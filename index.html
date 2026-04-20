@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Profesional</title>
+  <!-- CSS EKSTERNAL -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- CSS INTERNAL -->
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif; }
+
+    header h1 { color:#38bdf8; }
+
+    nav a {
+      margin-left:20px; text-decoration:none; color:#e2e8f0; transition:.3s;
+    }
+    nav a:hover { color:#38bdf8; }
+
+    .hero {
+      height:100vh; display:flex; align-items:center; justify-content:center;
+      flex-direction:column; text-align:center;
+      background:linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.9)),
+      url('hero-bg.jpeg');
+      background-size:cover; background-position:center;
+    }
+
+    .hero img {
+      width:140px; height:140px; border-radius:50%; margin-bottom:20px;
+      border:3px solid #38bdf8;
+    }
+
+    .hero h2 { font-size:2.5rem; }
+
+    .btn {
+      margin-top:20px; padding:12px 25px;
+      background:#38bdf8; border:none; border-radius:8px;
+      cursor:pointer; color:#0f172a; font-weight:bold;
+    }
+
+    section { padding:80px 10%; }
+
+    .about {
+      display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:center;
+    }
+
+    .about img { width:100%; border-radius:12px; }
+
+    .skills {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px;
+    }
+
+    .skill {
+      background:#1e293b; padding:15px; border-radius:10px;
+    }
+
+    .bar {
+      height:8px; background:#334155; border-radius:5px; overflow:hidden; margin-top:8px;
+    }
+
+    .bar span { display:block; height:100%; background:#38bdf8; }
+
+    .projects-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;
+    }
+
+    .card {
+      background:#1e293b; border-radius:12px; overflow:hidden; transition:.3s;
+    }
+
+    .card img { width:100%; height:150px; object-fit:cover; }
+
+    .card-content { padding:15px; }
+
+    .card:hover { transform:translateY(-5px); }
+
+    .contact { text-align:center; }
+
+    footer { text-align:center; padding:20px; background:#020617; }
+
+    @media(max-width:768px){
+      .about { grid-template-columns:1fr; }
+      .hero h2 { font-size:2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Portfolio</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <img src="img/avatar.jpeg" alt="profile">
+  <h2>Halo, Saya <span>SYIFA SUKMAWATI</span></h2>
+  <h2><span class="typing" id="typing"></span></h2>
+  <button class="btn" onclick="scrollToSection('projects')">Lihat Project</button>
+</section>
+
+<section id="about">
+  <!-- CSS INLINE -->
+  <h2 class="section-title" style="margin-bottom:20px; color:#38bdf8;">Tentang Saya</h2>
+  <div class="about">
+    <img src="img/about.jpeg">
+    <p>"Saya adalah siswa dari sekolah SMK SBS KUNINGAN,dan saya masuk di jurusan Teknik Jaringan Komputer dan Telekomunikasi".
+    <br><br>
+    Di kelas XI saya sedang mempelajari tentang HTML,CSS,Dan JavaScript
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills">
+    <div class="skill">HTML
+      <div class="bar"><span style="width:95%"></span></div>
+    </div>
+    <div class="skill">CSS
+      <div class="bar"><span style="width:90%"></span></div>
+    </div>
+    <div class="skill">JavaScript
+      <div class="bar"><span style="width:85%"></span></div>
+    </div>
+    <div class="skill">Canva
+      <div class="bar"><span style="width:88%"></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Project</h2>
+  <div class="projects-grid">
+
+    <div class="card">
+      <img src="img/projek-1.jpeg">
+      <div class="card-content">
+        <h3>microsoft office</h3>
+        <p>membuat makalah,proposal</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/projek-2.jpeg">
+      <div class="card-content">
+        <h3>Manajemen File</h3>
+        <p>Sistem upload, kompresi, dan manajemen berkas PDF.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/projek-4.jpeg">
+      <div class="card-content">
+        <h3>canva</h3>
+        <p>mendesign,membuat poster</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="section-title">Kontak</h2>
+  <p>Email: syifaaja@email.com</p>
+  <p>Instagram: @syifa</p>
+  <p>Tiktok: @syifa21</p>
+</section>
+
+<footer>
+  <p>&copy; 2026 Portfolio Profesional</p>
+</footer>
+<script src="js/script.js"></script>
